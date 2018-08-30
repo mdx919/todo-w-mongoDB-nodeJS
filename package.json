@@ -1,0 +1,16 @@
+{
+  "name": "todowithmongodb",
+  "version": "1.0.0",
+  "description": "todo app with node, express, mongo db and semantic UI",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "md naim uddin",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3",
+    "mongoose": "^5.2.12",
+    "nodemon": "^1.18.4"
+  }
+}
