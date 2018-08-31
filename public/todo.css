@@ -1,0 +1,50 @@
+.todo-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    margin-top: 15vh;
+}
+
+#header{
+    font-size: 3.0rem;
+}
+
+.todo-lists-container {
+    border: 1px solid black;
+    max-width: 500px;
+    min-height: 300px;
+    text-align: left;
+    /*display: block;*/
+    margin: 5px auto;
+    padding: 4px;
+}
+
+input {
+    width: 82%;
+    height: 45px;
+    font-size: 1.5rem;
+    padding: 0px 8px;
+    border-radius: 5px;
+}
+
+#date{
+    padding-left: 20px;
+    font-size: 12px;
+}
+
+i{
+    color: red;
+}
+
+#title{
+     font-size: 17px;
+}
+
+.item{
+    height: 2rem;
+}
+
+.item:nth-child(even) {
+    background: #F0F0F0;
+}
