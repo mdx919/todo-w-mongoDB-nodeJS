@@ -1,3 +1,7 @@
+body, html {
+    background-color: #9CAFD1;
+}
+
 .todo-header{
     display: flex;
     justify-content: center;
@@ -11,21 +15,25 @@
 }
 
 .todo-lists-container {
-    border: 1px solid black;
-    max-width: 500px;
-    min-height: 300px;
-    text-align: left;
-    /*display: block;*/
-    margin: 5px auto;
-    padding: 4px;
+    padding: 14px;
+    background-color: #A2C0BB;
+}
+
+.center {
+    text-align: center;
+    padding: 5px;
 }
 
 input {
-    width: 82%;
+    width: 80%;
     height: 45px;
     font-size: 1.5rem;
     padding: 0px 8px;
     border-radius: 5px;
+}
+
+.input-container {
+    background-color: #68799C !important;
 }
 
 #date{
@@ -34,6 +42,10 @@ input {
 }
 
 i{
+    color: #125AB7;
+}
+
+i:hover{
     color: red;
 }
 
@@ -41,10 +53,6 @@ i{
      font-size: 17px;
 }
 
-.item{
-    height: 2rem;
-}
-
-.item:nth-child(even) {
+.ui .grid:nth-child(even) {
     background: #F0F0F0;
 }

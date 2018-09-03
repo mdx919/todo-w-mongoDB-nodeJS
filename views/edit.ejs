@@ -1,0 +1,12 @@
+<% include ./partials/header %>
+
+<div class="ui main text container todo-header center">
+    <h1 id="header" class="ui header centered">Edit this todo</h1>
+    <form action="/home/<%= todo._id %>?_method=PUT" method="POST">
+            <input type="text" name="todo[text]" placeholder="<%= todo.text %>">
+            <input class="ui primary button" type="submit">
+    </form>
+</div>
+
+
+<% include ./partials/header %>

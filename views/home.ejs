@@ -3,20 +3,41 @@
 <div class="ui main text container todo-header">
     <h1 id="header" class="ui header centered">TODO Lists</h1>
 
-    <div class="ui top attached segment todo-lists-container">
-            <input type="text" name="newTodo" placeholder="Add new todo">
-            <span><button class="ui green big basic button">Submit</button></span>
+    <div class="ui container todo-lists-container">
+        <div class="ui grid input-container">
+          <div class="sixteen wide column">
+              <form action="/home" method="post">
+                <input type="text" name="todo[text]" placeholder="Add new todo" required>
+                <button type="submit" class="ui big inverted button">Submit</button>
+              </form>
+                
+          </div>
+        </div>
+      
             <div class="ui middle aligned divided list">
                 <% lists.forEach(function(list, index){ %>
-                  <div class="item">
-                    <div class="right floated content">
-                      <p id="date"><%= list.created.toDateString() %></p>  
+                    <div class="ui grid">
+                      <div class="one wide column">
+                          <form action="/home/<%= list._id %>?_method=DELETE" method="POST">
+                            <button class="ui icon button">
+                              <i class="trash icon"></i>
+                            </button>
+                          </form>
+                      </div>
+                      <div class="one wide column">
+                          <form action="/home/<%= list._id %>/edit" method="GET">
+                            <button class="ui icon button">
+                              <i class="edit icon"></i>
+                            </button>
+                          </form>
+                      </div>
+                      <div class="eleven wide column">
+                          <span><h4 id="title"><%= list.text %></h4></span>
+                      </div>
+                      <div class="three wide column">
+                          <p id="date"><%= list.created.toDateString() %></p>  
+                      </div>
                     </div>
-                        <i class="large trash alternate icon"></i>
-                    <div class="content">
-                      <h4 id="title"><%= list.text %></h4>
-                    </div>
-                  </div>
                 <% }) %>
             </div>
     </div>
